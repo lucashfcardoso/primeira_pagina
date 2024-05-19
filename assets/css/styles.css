@@ -1,0 +1,311 @@
+* {                                    /*Configuração padrão da página*/
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif; 
+}
+
+:root {                               /*Váriavel de estilização*/
+    --purple-200: #9a7bd1;
+    --purple-500: #6b36c8;
+    --purple-800: #441f88;
+
+    --black-800: #171717;
+
+    --gray-200: #cccccc;
+    --gray-400: #505861;
+
+    --white: #F9F9F9;
+}
+
+html {
+    height: 100vh;                         /* Altura da tela */
+    scroll-behavior: smooth;               /* Scroll suave */
+}
+
+body {
+    background: var(--gray-200);        /* Cor de fundo */
+    color: var(--black-800);            /* Cor da fonte */
+}
+
+/* CONFIGURAÇÃO PARA A BARRRA DE ROLAGEM */
+body::-webkit-scrollbar {
+    width: 8px; /* largura da Scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--black-800);   /* cor do plano de fundo da Scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--purple-500);    /* cor do scroll */
+    border-radius: 20px;                    /* borda do scroll */
+}
+
+button,
+a {
+    cursor: pointer;    /* Definindo que o botão e as tags <a> fiquem com o cursor para clique */
+}
+
+/* Classe Padrão para todos os Botões */
+.btn {
+    text-align: center;
+    padding: 12px 32px; /* Definindo espaçamento interno de 12px acima e abaixo e 32px nas laterais */
+    background: var(--purple-500);   /* Sem background */
+    border: 1px solid var(--purple-200);    /* Borda com 1px, com a linha solida e cor roxa */
+    color: var(--white);
+    border-radius: 10px;    /* Deixa a borda das tags arredondadas */
+    font-weight: 700;       /* Deixa a fonte em negrito*/
+}
+
+/* Hover: pseudo-classe que modifica algo no HTML quando o usuário passa o mouse acima do elemento */
+.btn:hover {
+    background: var(--purple-200);
+}
+
+/* Classe Padrão para Alinhamento com Display Flex */
+.flex {
+    display: flex;              /* modo de organização de elementos: Flex*/
+    justify-content: center;    /* alinhamento horizontal */
+    align-items: center;        /* alinhamento vertical */
+}
+
+/* Classe Padrão para Alinhamento com Display Flex em Modo Coluna*/
+.flex-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Os itens irão ficar em coluna, um abaixo do outro */
+}
+
+/* MENU */
+.menu_container {
+    height: 80px;       /* altura do elemento/tag*/
+
+    position: sticky;   /* Posição fixa no topo da tela*/
+    top: 0;             /* Posição no topo a esquerda */
+    width: 100%;        /* Usar todo o espaço disponivel */
+
+    background-color: var(--purple-800);
+    border-bottom: 1px solid var(--purple-500);
+    filter: opacity(0.9);   /* permite que add um filtro, no caso a opacidade */
+}
+
+/* Irá alterar todas as tags <a>, obrigatoriamente, dentro da classe menu_container*/
+.menu_container a {
+    font-size: 16px;    /* tamanho da fonte */
+    color: var(--white);
+    font-weight: bold;  /* Deixa a fonte em negrito*/
+}
+
+.menu_container a:hover {
+    color: var(--purple-200);
+}
+
+.menu_content {
+    max-width: 1120px;  /* tamanho máximo que esse elemento terá*/
+    padding: 0 24px;    /* definindo espaçamento interno de 0px acima e abaixo e 24px nas laterais */
+
+    width: 100%;        /* dos 1120px, o elemento deve ocupar todo esse espaço */
+    display: flex;
+    justify-content: space-between; /* coloca os elementos os mais longe um do outro, com um espaço entre eles */
+}
+
+.menu_lista {
+    list-style: none;   /* retira os estilos padrões das listas */
+    text-align: center;
+}
+
+/* Irá alterar todas as tags <li>, obrigatoriamente, dentro da classe menu_lista*/
+.menu_lista li {
+    /* definindo espaçamento externo de 0px acima, lado direito, abaixo e 24px na lateral esquerda */
+    margin: 0 0 0 16px; 
+}
+
+/* HOME */
+.home_container {
+    max-width: 1120px;
+
+    /* definindo espaçamento externo de 16px acima e abaixo, e automatico nas laterais */
+    margin: 16px auto;
+
+    /* definindo espaçamento interno de 0px acima e abaixo, e 16px nas laterais */
+    padding: 0 16px;
+
+    /* Fazemos um cálculo, pegamos toda a tela visivel do usuário, e subtraimos 100px, devido o tamanho do menu*/
+    height: calc(100vh - 100px);    
+
+    display: flex;
+    justify-content: center;    /* alinhamento horizontal */
+    align-items: center;        /* alinhamento vertical */
+}
+
+/* todas as tags P, H1 e H4, que estejam dentro da classe home_container terão essas config. */
+.home_container p,
+h1,
+h4 {
+    text-align: center;
+    font-size: 16px;
+}
+
+.home_container h4 {
+    font-weight: bold;
+    margin: 16px 0;
+}
+
+.home_container h1 {
+    font-size: 36px;
+    line-height: 48px;  /* definindo o tamanho da linha */
+    font-weight: bold;
+}
+
+.home_container p {
+    margin: 16px 0;
+}
+
+.home_container .btn {
+    width: 40%; /* o botão terá 40% da largura do container/elemento/tag que o envolve, no caso do home_container */
+}
+
+.home_content {
+    width: 50vw;    /* o conteudo será mostrado utilizando metada da tela visivel do usuario */
+
+    display: flex;
+    justify-content: center;    /* alinhamento horizontal */
+    align-items: center;        /* alinhamento vertical */
+    flex-direction: column;
+}
+
+.home_content_img {
+    display: flex;
+    width: 75%; /* terá 75% da largura da imagem. Se a img possui uma largura de 500px, ela será exibida com 375px */
+}
+
+/* SOBRE */
+.sobre_container {
+    max-width: 1120px;
+    margin: -24px auto; /* queremos fazer uma margin inversa, ou seja, que o sobre fique um pouco acima da tag anterior */
+    padding: 0 16px;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;    /* alinhamento horizontal */
+    align-items: center;        /* alinhamento vertical */
+}
+
+.sobre_container img {
+    display: flex;
+    width: 35%;
+    border: 5px solid var(--purple-500);
+    border-radius: 50%;
+}
+
+.sobre_container h1 {
+    font-size: 32px;
+    text-align: center;
+    line-height: 48px;
+    font-weight: bold;
+}
+
+.sobre_container p {
+    text-align: center;
+    margin: 16px 0;
+}
+
+.sobre_github {
+    justify-content: space-evenly; /* os elementos terão um espaço entre eles, e entre as bordas do container */
+}
+
+/* CONTATO */
+.contato_container {
+    max-width: 1120px;
+    margin: 64px auto 32px;
+    padding: 0 32px;
+
+    display: grid;              /* modo de organização de elementos em Grade - Colunas e Linhas - parecido com uma tabela*/
+    justify-content: center;    /* alinhamento horizontal */
+    align-items: center;        /* alinhamento vertical */
+    grid-template-columns: repeat(auto-fill, 518px);    /* defininos as colunas do Grid/Grade com uma largura mínima de 518 pixels, preenchendo automaticamente o espaço disponível. */ 
+    gap: 20px;  /* espaçamento acima, abaixo, e nas laterais usado no display grid, para dar espaço aos elementos */
+}
+
+.contato_container h4 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 16px 0;
+}
+
+.contato_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    /* alinhamento horizontal */
+    align-items: center;        /* alinhamento vertical */
+
+    margin: 64px 0 0 0;
+    font-size: 20px;
+}
+
+.contato_content p {
+    display: block;
+    text-align: justify;
+}
+
+/* REDES SOCIAIS */
+.social_container {
+    display: flex;
+    justify-content: space-evenly;  /* os elementos terão um espaço entre eles, e entre as bordas do container */
+    margin: 32px 0 0 0;
+    width: 320px;
+}
+
+.social_icon {
+    width: 75px;
+    height: 75px;
+}
+
+.social_icon:hover {    /* ao passar o mouse, os ícones terão suas cores mudadas para roxo, fazemos dessa forma pois os icones são arquivos .SVG*/
+    filter: brightness(0) saturate(100%) invert(29%) sepia(31%) saturate(5190%) hue-rotate(249deg) brightness(79%) contrast(99%);
+}
+
+/* FORMULÁRIO */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+
+    margin: 112px 0 0 0;
+    padding: 24px;
+    border: none;
+}
+
+form label {
+    font-size: 20px;
+    text-align: left;
+}
+
+form input,
+textarea {
+    margin: 8px 0 16px;
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+}
+
+textarea {
+    resize: none;   /* impedimos que o Textarea seja aumentado ou diminuido pelo usuário*/
+}
+
+/* RODAPÉ */
+footer {
+    margin: 0;
+    padding: 32px;
+    color: var(--white);
+    background-color: var(--purple-500);
+    filter: opacity(0.9);
+    font-weight: bold;
+}

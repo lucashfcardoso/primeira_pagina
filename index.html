@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" size="any" href="assets/img/favicon.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Home</title>
+</head>
+
+<body>
+    <header id="menu" class="menu_container flex"> 
+        <div class="menu_content"> 
+            <a href="#">Universe</a>
+
+            <nav>
+                <ul class="menu_lista flex"> 
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contate me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="home_container">
+            <article id="home-texto" class="home_content"> 
+                <h4>Bem Vindo a um Novo Universo</h4>
+                <h1>Diferentes mundos para diferentes pessoas</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod error veniam in voluptatem magni
+                    quisquam</p>
+
+                <a class="btn" target="_blank" href="https://github.com/lucashfcardoso">
+                    Explore
+                </a>
+            </article>
+
+            <article id="home-imagem" class="home_content">
+                <img class="home_content_img" src="assets/imgs/astronauta.svg" alt="Capacete de Astronauta Animado">
+            </article>
+        </section>
+
+        <!-- Adicione os dados do seu Github-->
+        <section id="sobre" class="sobre_container"> <!-- Adicione aqui as CLASSES --> 
+            <!--Fazer com Javascript?-->
+            
+        </section>
+
+        <section id="contato" class="contato_container">                                      <!--Section Contato-->
+
+            <article id="contato-texto" class="contato_content"> 
+                <h4>Contate me</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi similique esse fuga necessitatibus,
+                    iusto alias eius perferendis qui iste minima blanditiis repellendus distinctio dolor obcaecati
+                    aliquid quod quidem incidunt quibusdam!</p>
+
+                <div id="redes-sociais" class="social_container flex">
+                    <a href="https://www.linkedin.com/in/lucas-henrique-ferreira-cardoso-/">
+                        <img class="social_icon" src="assets/imgs/linkedin.svg" alt="Logo do LinkedIn" />
+                    </a>
+                    <a href="https://github.com/lucashfcardoso">
+                        <img class="social_icon" src="assets/imgs/github.svg" alt="Logo do Github" />
+                    </a>
+                    <a href="https://www.instagram.com/lucashfc_/">
+                        <img class="social_icon" src="assets/imgs/instagram.svg" alt="Logo do Instagram" />
+                    </a>
+                </div>
+            </article>
+
+            <form>                                                                              <!--Forumlário-->
+                <label for="nome">Nome: </label>
+                <input onkeyup="validarNome()" id="nome" type="text" name="name" placeholder="Digite seu nome:" required>
+                <div id="txtNome"></div>
+
+                <label for="email">Email: </label>
+                <input onkeyup="validarEmail()" id="email" type="email" name="email" placeholder="Digite seu email:" required>
+                <div id="txtEmail"></div>
+
+                <label for="subject">Assunto: </label>
+                <input id="subject" type="text" name="subject" placeholder="Digite o assunto da mensagem:" required>
+
+                <label for="message">Mensagem: </label>
+                <textarea onkeyup="validarMessage()" id="message" name="message" placeholder="Digite sua mensagem: " required></textarea>
+                <div id="txtMensagem"></div>
+
+                <button onclick="enviarForm()" class="btn" type="submit">Enviar</button>
+            </form>
+
+        </section>
+
+    </main>
+
+
+
+    <footer class="flex">
+        Feito por Lucas Henrique Ferreira Cardoso - 2024
+    </footer>
+
+
+
+    <script src="assets/js/scripts.js"></script>
+
+</body>
+
+</html>
